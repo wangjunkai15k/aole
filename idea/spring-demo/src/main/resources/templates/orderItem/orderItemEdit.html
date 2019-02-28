@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/> 
+    <title>user</title>
+    <link th:href="@{/webjars/bootstrap/3.3.6/dist/css/bootstrap.css}" rel="stylesheet"></link>
+</head>
+<body class="container">
+<br/>
+<h1>修改用户</h1>
+<br/><br/>
+<div class="with:80%">
+    <form class="form-horizontal"   th:action="@{/edit}" th:object="${orderItem}"  method="post">
+        <input type="hidden" name="id" th:value="*{id}" />
+        <div class="form-group">
+            <label for="title" class="col-sm-2 control-label">属性名</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" name="title"  id="title" th:value="*{title}" placeholder="属性名"/>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="price" class="col-sm-2 control-label" >价格</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" name="price" id="price"  th:value="*{price}" placeholder="价格"/>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="item_id" class="col-sm-2 control-label">ItemId</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" name="item_id"  id="item_id" th:value="*{item_id}" placeholder="item_id"/>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="order_id" class="col-sm-2 control-label">OrderId</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" name="order_id"  id="order_id" th:value="*{order_id}" placeholder="order_id"/>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="goods_id" class="col-sm-2 control-label">GoodsId</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" name="goods_id"  id="goods_id" th:value="*{goods_id}" placeholder="goods_id"/>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="total_fee" class="col-sm-2 control-label">session_id</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" name="total_fee"  id="total_fee" th:value="*{total_fee}" placeholder="session-id"/>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+                <input type="submit" value="Submit" class="btn btn-info" />
+                &nbsp; &nbsp; &nbsp;
+                <a href="/toAdd" th:href="@{/orderItemList}" class="btn btn-info">Back</a>
+            </div>
+
+        </div>
+    </form>
+</div>
+</body>
+</html>

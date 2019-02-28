@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>user</title>
+    <link rel="stylesheet" th:href="@{/css/bootstrap.css}"></link>
+</head>
+<body class="container">
+<br/>
+<h1>修改用户</h1>
+<br/><br/>
+<div class="with:80%">
+    <form class="form-horizontal"   th:action="@{/add}"   method="post">
+
+        <div class="form-group">
+            <label for="user_id" class="col-sm-2 control-label">userName</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" name="user_id"  id="user_id"  placeholder="用户名"/>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="receiver_mobile" class="col-sm-2 control-label" >Password</label>
+            <div class="col-sm-10">
+                <input type="password" class="form-control" name="receiver_mobile" id="receiver_mobile"   placeholder="密码"/>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="receiver" class="col-sm-2 control-label">age</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" name="receiver"  id="receiver"  placeholder="年龄"/>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+                <input type="submit" value="Submit" class="btn btn-info" />
+                &nbsp; &nbsp; &nbsp;
+                <a href="/toAdd" th:href="@{/orderList}" class="btn btn-info">Back</a>
+            </div>
+
+        </div>
+    </form>
+</div>
+</body>
+</html>
